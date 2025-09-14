@@ -1,5 +1,4 @@
-
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function TypeVault() {
   const { vaults } = useVault();

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { HiOutlineHome } from "react-icons/hi2";
@@ -9,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { auth } from "../firebase/config";
 import { signOut } from "firebase/auth";
 import Link from "next/link";
-import { useVault } from "./vaultContext"; // ✅ pull data directly
+import { useVault } from "./VaultContext"; // ✅ pull data directly
 
 function SideBar({ isOpen, onClose }) {
   const router = useRouter();
@@ -54,7 +53,9 @@ function SideBar({ isOpen, onClose }) {
               onClick={handleToggle}
               className="flex items-center gap-3 cursor-pointer text-2xl mt-4"
             >
-              <p className="text-sm text-[#6E80A3]">Hide my dashboard balance</p>
+              <p className="text-sm text-[#6E80A3]">
+                Hide my dashboard balance
+              </p>
               {isVisible ? (
                 <LiaToggleOnSolid className="text-green-500 text-3xl" />
               ) : (
@@ -103,5 +104,3 @@ function SidebarLinks({ handleSignout }) {
 }
 
 export default SideBar;
-
-

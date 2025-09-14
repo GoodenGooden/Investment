@@ -1,10 +1,15 @@
-
 import { useEffect } from "react";
 import VaultSection from "./VaultSection";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function VaultRegF({ onNext, principal, setPrincipal: setParentPrincipal }) {
-  const { selectedVault, setPrincipal, setEarning, setTotal, setOtherMonthEarning } = useVault();
+  const {
+    selectedVault,
+    setPrincipal,
+    setEarning,
+    setTotal,
+    setOtherMonthEarning,
+  } = useVault();
 
   // parse interestRate safely
   const interestRate = parseFloat(
@@ -33,7 +38,16 @@ function VaultRegF({ onNext, principal, setPrincipal: setParentPrincipal }) {
     setPrincipal(numericPrincipal);
     setEarning(earning);
     setOtherMonthEarning(otherMonthEarning);
-  }, [numericPrincipal, setTotal, earning, setPrincipal, setOtherMonthEarning, setEarning, otherMonthEarning, total]);
+  }, [
+    numericPrincipal,
+    setTotal,
+    earning,
+    setPrincipal,
+    setOtherMonthEarning,
+    setEarning,
+    otherMonthEarning,
+    total,
+  ]);
 
   return (
     <div className="p-4 sm:p-6 text-[#6E80A3]">
@@ -47,10 +61,14 @@ function VaultRegF({ onNext, principal, setPrincipal: setParentPrincipal }) {
           </p>
 
           <div className="flex flex-col">
-            <p className="text-base sm:text-lg font-bold text-gray-500 mb-1">Enter an amount</p>
+            <p className="text-base sm:text-lg font-bold text-gray-500 mb-1">
+              Enter an amount
+            </p>
             <div className="flex justify-between gap-8 sm:gap-16 lg:gap-60 border-b-2 border-gray-300 pb-1">
               <div className="flex items-center gap-2">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold">NGN</span>
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-bold">
+                  NGN
+                </span>
                 <input
                   type="number"
                   placeholder="00"
@@ -87,13 +105,3 @@ function VaultRegF({ onNext, principal, setPrincipal: setParentPrincipal }) {
 }
 
 export default VaultRegF;
-
-
-
-
-
-
-
-
-
-

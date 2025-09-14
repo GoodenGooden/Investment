@@ -1,5 +1,4 @@
-
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function VaultRegD({ onNext, selectedDate, setSelectedDate }) {
   const { selectedVault } = useVault();

@@ -1,10 +1,9 @@
-
 "use client";
 
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import dynamic from "next/dynamic";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 import { auth, db } from "../firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
@@ -139,7 +138,3 @@ function Fund() {
 }
 
 export default Fund;
-
-
-
-

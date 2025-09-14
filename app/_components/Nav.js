@@ -1,4 +1,3 @@
-
 // Nav.jsx
 "use client";
 
@@ -9,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase/config";
 import { doc, getDoc } from "firebase/firestore";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function Nav({ onOpenSidebar = () => {} }) {
   const { isVisible, userData, setIsVisible } = useVault();

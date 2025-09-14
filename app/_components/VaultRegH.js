@@ -1,9 +1,8 @@
-
 "use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function VaultRegH({ selectedOption, principal, selectedDate, frequency }) {
   const { selectedVault, setMaturityDate, setPrincipal, total } = useVault(); // ⬅ added setPrincipal
@@ -84,10 +83,6 @@ function VaultRegH({ selectedOption, principal, selectedDate, frequency }) {
 }
 
 export default VaultRegH;
-
-
-
-
 
 /*
 

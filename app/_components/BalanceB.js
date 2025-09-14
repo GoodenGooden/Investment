@@ -1,5 +1,3 @@
-
-
 "use client";
 
 // components/BalanceB.jsx
@@ -15,12 +13,18 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase/config";
 import { doc, getDoc } from "firebase/firestore";
 import Link from "next/link";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function BalanceB() {
   const [user] = useAuthState(auth); // Logged-in user
   const [userData, setUserData] = useState(null); // Firestore user data
-  const { totalEarn, isVisible, vaultBalance, totalPrincipal, loadingUserData } = useVault();
+  const {
+    totalEarn,
+    isVisible,
+    vaultBalance,
+    totalPrincipal,
+    loadingUserData,
+  } = useVault();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -40,7 +44,7 @@ function BalanceB() {
     fetchUserData();
   }, [user]);
 
-   if (loadingUserData) {
+  if (loadingUserData) {
     return <p className="p-4">Loading account...</p>;
   }
 
@@ -63,7 +67,9 @@ function BalanceB() {
 
             <BalanceCard
               label="Principal"
-              value={isVisible ? "****" : `₦${totalPrincipal?.toLocaleString()}`}
+              value={
+                isVisible ? "****" : `₦${totalPrincipal?.toLocaleString()}`
+              }
               icon={<IoWalletOutline size={20} className="text-[#00A343]" />}
             />
 
@@ -84,15 +90,13 @@ function BalanceB() {
 
           {/* Vault types section */}
           <div className="w-full bg-[#F4FFF8] py-6">
-          <div className=" max-w-7xl mx-auto px-4 sm:px-6 ">
-            <TypeVault />
-          </div>
+            <div className=" max-w-7xl mx-auto px-4 sm:px-6 ">
+              <TypeVault />
+            </div>
           </div>
         </>
       ) : (
-        
-       <p className="p-4">Processing Account...</p>
-        
+        <p className="p-4">Processing Account...</p>
       )}
     </div>
   );

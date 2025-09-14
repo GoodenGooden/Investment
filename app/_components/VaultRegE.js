@@ -1,6 +1,5 @@
-
 import { TiTick } from "react-icons/ti";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function VaultRegE({ onNext, frequency, setFrequency }) {
   const { selectedVault } = useVault();

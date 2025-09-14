@@ -1,17 +1,15 @@
-
-
 import VaultSection from "./VaultSection";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 import { useEffect, useState } from "react";
 
 function VaultRegG({ onNext, principal = 0 }) {
-  const { 
-    selectedVault, 
-    walletAmount, 
-    setEarning, 
-    setOtherMonthEarning,  
-    setPrincipal ,
-    deductBalance
+  const {
+    selectedVault,
+    walletAmount,
+    setEarning,
+    setOtherMonthEarning,
+    setPrincipal,
+    deductBalance,
   } = useVault();
 
   const [selectedMethod, setSelectedMethod] = useState(null);
@@ -42,7 +40,14 @@ function VaultRegG({ onNext, principal = 0 }) {
     setPrincipal(numericPrincipal);
     setEarning(earning);
     setOtherMonthEarning(otherMonthEarning);
-  }, [numericPrincipal, setPrincipal, setEarning, setOtherMonthEarning, earning, otherMonthEarning]);
+  }, [
+    numericPrincipal,
+    setPrincipal,
+    setEarning,
+    setOtherMonthEarning,
+    earning,
+    otherMonthEarning,
+  ]);
 
   // Validation for insufficient funds
   useEffect(() => {
@@ -118,17 +123,6 @@ function VaultRegG({ onNext, principal = 0 }) {
 }
 
 export default VaultRegG;
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 import VaultSection from "./VaultSection";

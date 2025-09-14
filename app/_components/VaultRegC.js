@@ -1,7 +1,6 @@
-
 import { useState } from "react";
 import { IoThumbsUpOutline, IoThumbsDownOutline } from "react-icons/io5";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function VaultRegC({ onNext }) {
   const { selectedVault } = useVault();

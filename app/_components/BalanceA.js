@@ -1,4 +1,3 @@
-
 "use client";
 
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
@@ -7,12 +6,13 @@ import { GiWallet } from "react-icons/gi";
 import { LuWalletCards } from "react-icons/lu";
 import BalanceCard from "./BalanceCard";
 
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 import Link from "next/link";
 import Debit from "./Debit";
 
 function BalanceA() {
-  const { vaultBalance, walletAmount, isVisible, vaults, loadingUserData } = useVault(); // ✅ from context
+  const { vaultBalance, walletAmount, isVisible, vaults, loadingUserData } =
+    useVault(); // ✅ from context
 
   if (loadingUserData) {
     return (
@@ -32,7 +32,12 @@ function BalanceA() {
           <BalanceCard
             label="Wallet Balance"
             value={isVisible ? "****" : `₦${walletAmount?.toLocaleString()}`}
-            icon={<MdOutlineAccountBalanceWallet size={20} className="text-[#00A343]" />}
+            icon={
+              <MdOutlineAccountBalanceWallet
+                size={20}
+                className="text-[#00A343]"
+              />
+            }
           />
         )}
 

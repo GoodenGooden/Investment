@@ -1,26 +1,45 @@
-
 "use client";
 
 import { IoCarOutline } from "react-icons/io5";
 import { PiHouseLine, PiFlowerTulip } from "react-icons/pi";
 import { SlPlane, SlCamera, SlGraduation } from "react-icons/sl";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 
 function VaultRegA({ onNext }) {
   const { selectedVault, selectedOption, setSelectedOption } = useVault();
 
   const options = [
-    { icon: <IoCarOutline className="text-5xl sm:text-6xl md:text-8xl" />, label: "buy a car" },
-    { icon: <PiHouseLine className="text-5xl sm:text-6xl md:text-8xl" />, label: "buy a house" },
-    { icon: <PiFlowerTulip className="text-5xl sm:text-6xl md:text-8xl" />, label: "fund my wedding" },
-    { icon: <SlPlane className="text-5xl sm:text-6xl md:text-8xl" />, label: "plan a trip" },
-    { icon: <SlCamera className="text-5xl sm:text-6xl md:text-8xl" />, label: "buy gadgets" },
-    { icon: <SlGraduation className="text-5xl sm:text-6xl md:text-8xl" />, label: "pay school fees" },
+    {
+      icon: <IoCarOutline className="text-5xl sm:text-6xl md:text-8xl" />,
+      label: "buy a car",
+    },
+    {
+      icon: <PiHouseLine className="text-5xl sm:text-6xl md:text-8xl" />,
+      label: "buy a house",
+    },
+    {
+      icon: <PiFlowerTulip className="text-5xl sm:text-6xl md:text-8xl" />,
+      label: "fund my wedding",
+    },
+    {
+      icon: <SlPlane className="text-5xl sm:text-6xl md:text-8xl" />,
+      label: "plan a trip",
+    },
+    {
+      icon: <SlCamera className="text-5xl sm:text-6xl md:text-8xl" />,
+      label: "buy gadgets",
+    },
+    {
+      icon: <SlGraduation className="text-5xl sm:text-6xl md:text-8xl" />,
+      label: "pay school fees",
+    },
   ];
 
   return (
     <div className="bg-[#F4FFF8] px-4 sm:px-6 md:px-10 py-6 md:py-10">
-      <p className="text-sm sm:text-base md:text-lg text-gray-500 mb-4">Create a regular vault</p>
+      <p className="text-sm sm:text-base md:text-lg text-gray-500 mb-4">
+        Create a regular vault
+      </p>
 
       {/* Vault Title + Details */}
       <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-10">
@@ -78,7 +97,9 @@ function VaultRegA({ onNext }) {
             }`}
           >
             {opt.icon}
-            <p className="mt-2 text-sm sm:text-base md:text-lg font-bold">{opt.label}</p>
+            <p className="mt-2 text-sm sm:text-base md:text-lg font-bold">
+              {opt.label}
+            </p>
           </div>
         ))}
       </div>
@@ -87,18 +108,3 @@ function VaultRegA({ onNext }) {
 }
 
 export default VaultRegA;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

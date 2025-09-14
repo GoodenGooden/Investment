@@ -1,12 +1,19 @@
-
-"use client"
+"use client";
 
 import Link from "next/link";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 import { useRouter } from "next/navigation";
 
 function Success() {
-  const { maturityDate, principal, earning, selectedOption, selectedVault, otherMonthEarning, addVault } = useVault();
+  const {
+    maturityDate,
+    principal,
+    earning,
+    selectedOption,
+    selectedVault,
+    otherMonthEarning,
+    addVault,
+  } = useVault();
   const router = useRouter();
 
   const handleVaultCreation = () => {

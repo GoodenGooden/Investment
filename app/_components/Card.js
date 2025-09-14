@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -9,7 +8,7 @@ import {
   TbHexagonNumber6,
   TbNumber12Small,
 } from "react-icons/tb";
-import { useVault } from "./vaultContext";
+import { useVault } from "./VaultContext";
 import { useRouter } from "next/navigation";
 
 export default function Card() {
