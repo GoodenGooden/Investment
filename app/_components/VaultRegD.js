@@ -1,3 +1,5 @@
+"use client"
+
 import { useVault } from "./VaultContext";
 
 function VaultRegD({ onNext, selectedDate, setSelectedDate }) {

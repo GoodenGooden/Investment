@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 import VaultSection from "./VaultSection";
 import { useVault } from "./VaultContext";

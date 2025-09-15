@@ -34,3 +34,4 @@ function VaultCard({ title, image, description }) {
 }
 
 export default VaultCard;
+

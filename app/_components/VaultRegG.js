@@ -1,3 +1,6 @@
+"use client";
+
+
 import VaultSection from "./VaultSection";
 import { useVault } from "./VaultContext";
 import { useEffect, useState } from "react";
@@ -123,6 +126,12 @@ function VaultRegG({ onNext, principal = 0 }) {
 }
 
 export default VaultRegG;
+
+
+
+
+
+
 
 /*
 import VaultSection from "./VaultSection";

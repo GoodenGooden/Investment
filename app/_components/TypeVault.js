@@ -1,3 +1,5 @@
+"use client"
+
 import { useVault } from "./VaultContext";
 
 function TypeVault() {
@@ -61,3 +63,4 @@ function TypeVault() {
 }
 
 export default TypeVault;
+

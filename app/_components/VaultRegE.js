@@ -1,3 +1,5 @@
+"use client"
+
 import { TiTick } from "react-icons/ti";
 import { useVault } from "./VaultContext";
 

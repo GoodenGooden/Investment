@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { IoThumbsUpOutline, IoThumbsDownOutline } from "react-icons/io5";
 import { useVault } from "./VaultContext";
