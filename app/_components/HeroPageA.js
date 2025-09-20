@@ -19,7 +19,7 @@ function HeroPageA() {
                         smartest and most comfortable way.
                     </p>
                     <Button 
-                        href="/save" 
+                        href="/" 
                         className="w-full sm:w-60 text-center items-center font-bold text-lg"
                     >
                         Start Saving Now

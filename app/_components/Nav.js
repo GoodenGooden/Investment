@@ -11,7 +11,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useVault } from "./VaultContext";
 
 function Nav({ onOpenSidebar = () => {} }) {
-  const { isVisible, userData, setIsVisible } = useVault();
+  const { isVisible, userData, setIsVisible, setUserData } = useVault();
   const [user] = useAuthState(auth);
 
   const [mounted, setMounted] = useState(false);
@@ -39,7 +39,7 @@ function Nav({ onOpenSidebar = () => {} }) {
       }
     };
     fetchUserData();
-  }, [user]);
+  }, [user, setUserData]);
 
   const handleToggle = () => setIsVisible((prev) => !prev);
 

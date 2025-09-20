@@ -22,6 +22,8 @@ const db = getFirestore(app);
 
 export { app, auth, db };
 
+console.log("API KEY at runtime:", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+
 
 
 
